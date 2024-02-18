@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Starter</title>
+    <style>
+        /* Set the background color to white */
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Changed height for better viewport compatibility */
+            height: 145vh;
+        }
+
+        /* Style the button */
+        .start-button {
+            background-image: url('C:\Users\user\OneDrive\Desktop\prince\prince1.png'); /* Replace with your image path */
+            background-size: cover;
+            width: 350px; /* Adjust the width as needed */
+            height: 140px; /* Adjust the height as needed */
+            border: 12px solid #bf8f2d; /* Add a black border */
+            border-radius: 18px; /* Add rounded corners */
+            color: #7d1432;
+            font-size: 30px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        /* Style the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal content */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px; /* Adjust maximum width as needed */
+            max-height: 80%;
+            overflow: auto; /* Allow scrolling if content too tall */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bf8f2d;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        body {
+            background-image: url('C:/Users/user/OneDrive/Desktop/prince/prince1.png');
+            /* Other background properties (color, size, etc.) can be added here */
+        }
+    </style>
+    <style>
+        body {
+            background-color: white;
+            background-image: url('C:/Users/user/OneDrive/Desktop/prince/prince1.png');
+            background-size: cover ;
+             /* Adjust as needed */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            /* Other styles... */
+        }
+    </style>
+</head>
+<body>
+    <button class="start-button">اطلاق برنامج مسار</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="C:\Users\user\OneDrive\Desktop\prince\thank.png" alt="Popup Image" style="width: 80%;">
+        </div>
+    </div>
+
+    <!-- Add your event logic here (JavaScript) -->
+    <script>
+        const startButton = document.querySelector('.start-button');
+        const modal = document.getElementById("myModal");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        startButton.addEventListener('click', () => {
+            // Display the modal
+            modal.style.display = "block";
+        });
+
+        // Close the modal when the close button is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
